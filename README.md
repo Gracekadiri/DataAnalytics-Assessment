@@ -53,7 +53,6 @@ where `0.001` represents a 0.1% profit margin per transaction.
 ## Challenges & Solutions
 ### 1. Data Quality & Assumptions
 - **Missing Full Names**: The `name` field was often NULL. I generated full names dynamically using `CONCAT(first_name, ' ', last_name)`.
-- **Unknown Plan Status**: I assumed `status_id = 1` refers to active plans, based on typical schema patterns. This was clearly marked in code comments.
 - **Plan Classification**: Savings and investments were determined using boolean flags: `is_regular_savings = 1` and `is_a_fund = 1`.
 
 ### 2. Logical Edge Cases
