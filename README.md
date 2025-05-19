@@ -42,8 +42,8 @@ This repository contains my solutions to the SQL Proficiency Assessment.
 ## Assessment_Q4.sql – Customer Lifetime Value (CLV) Estimation
 **Approach**
 - Calculated customer tenure in months since `date_joined` using `TIMESTAMPDIFF`, with `GREATEST(..., 1)` to avoid zero-tenure edge cases.
-- Summed `confirmed_amount` values (in Naira) to compute total inflows.
-- Applied the simplified CLV formula:
+  - Summed `confirmed_amount` values (in Naira) to compute total inflows.
+  - Applied the simplified CLV formula:
 CLV = (total_transactions / tenure_months) * 12 * 0.001
 where `0.001` represents a 0.1% profit margin per transaction.
 - Rounded and ordered results by `estimated_clv DESC`.
